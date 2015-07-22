@@ -27,6 +27,7 @@ module.exports = CachingWriter.extend({
     var concat = this.concat = new ConcatWithSourcemap({
       outputFile: path.join(outDir, this.outputFile),
       sourceRoot: this.sourceRoot,
+      mapCommentType: this.sourceMapConfig.mapCommentType,
       baseDir: inDir,
       cache: this.encoderCache
     });
